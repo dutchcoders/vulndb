@@ -2,6 +2,9 @@ package main
 
 import "strings"
 
+const requiredLength = 7
+const requiredEditionLength = 6
+
 // Product represents a product unmarshalled from a CPE URL
 type Product struct {
 	Part      string
@@ -16,9 +19,6 @@ type Product struct {
 	Other     string
 	Language  string
 }
-
-const requiredLength = 7
-const requiredEditionLength = 6
 
 // UnmarshalText satisfies the text.Unmarshaler interface for XML parsing
 func (p *Product) UnmarshalText(text []byte) error {
