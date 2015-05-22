@@ -4,7 +4,9 @@
 
 ## Building the DB
 
-Build a DB with a list of files. Eg: `vulndb build nvdcve-2.0-2015.xml nvdcve-2.0-2014.xml`
+Build a DB with a list of files. Eg: 
+`vulndb build nvdcve-2.0-2015.xml nvdcve-2.0-2014.xml`
+`vulndb build ~/Downloads/*.xml`
 
 If the DB already exists, it will throw an error. The `-f` flag will force a removal of the existing database.
 
