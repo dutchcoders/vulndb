@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-const numEntries = 7
+const numEntries = 8
 
 func TestParseNvd(t *testing.T) {
 	var result Nvd
