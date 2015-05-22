@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nvd xmlns:scap-core="http://scap.nist.gov/schema/scap-core/0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:patch="http://scap.nist.gov/schema/patch/0.1" xmlns:vuln="http://scap.nist.gov/schema/vulnerability/0.4" xmlns:cvss="http://scap.nist.gov/schema/cvss-v2/0.2" xmlns:cpe-lang="http://cpe.mitre.org/language/2.0" xmlns="http://scap.nist.gov/schema/feed/vulnerability/2.0" xsi:schemaLocation="http://scap.nist.gov/schema/patch/0.1 http://nvd.nist.gov/schema/patch_0.1.xsd http://scap.nist.gov/schema/scap-core/0.1 http://nvd.nist.gov/schema/scap-core_0.1.xsd http://scap.nist.gov/schema/feed/vulnerability/2.0 http://nvd.nist.gov/schema/nvd-cve-feed_2.0.xsd" pub_date="2015-05-21T03:00:00" nvd_xml_version="2.0">
+  <entry id="CVE-2015-0001">
+    <vuln:vulnerable-configuration id="http://www.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_rt:-:gold</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-:gold</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0001</vuln:cve-id>
+    <vuln:published-datetime>2015-01-13T17:59:00.050-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-01-14T16:50:51.080-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>1.9</cvss:score>
+        <cvss:access-vector>LOCAL</cvss:access-vector>
+        <cvss:access-complexity>MEDIUM</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>PARTIAL</cvss:confidentiality-impact>
+        <cvss:integrity-impact>NONE</cvss:integrity-impact>
+        <cvss:availability-impact>NONE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-01-14T16:32:46.090-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-264"/>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-006" xml:lang="en">MS15-006</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The Windows Error Reporting (WER) component in Microsoft Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 allows local users to bypass the Protected Process Light protection mechanism and read the contents of arbitrary process-memory locations by leveraging administrative privileges, aka "Windows Error Reporting Security Feature Bypass Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0002">
+    <vuln:vulnerable-configuration id="http://www.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7:-:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_rt:-:gold</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7:-:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-:gold</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0002</vuln:cve-id>
+    <vuln:published-datetime>2015-01-13T17:59:01.253-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-01-14T16:51:14.253-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>7.2</cvss:score>
+        <cvss:access-vector>LOCAL</cvss:access-vector>
+        <cvss:access-complexity>LOW</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>COMPLETE</cvss:confidentiality-impact>
+        <cvss:integrity-impact>COMPLETE</cvss:integrity-impact>
+        <cvss:availability-impact>COMPLETE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-01-14T16:20:33.273-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-264"/>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-001" xml:lang="en">MS15-001</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="https://code.google.com/p/google-security-research/issues/detail?id=118" xml:lang="en">https://code.google.com/p/google-security-research/issues/detail?id=118</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="http://www.zdnet.com/article/google-discloses-unpatched-windows-vulnerability/" xml:lang="en">http://www.zdnet.com/article/google-discloses-unpatched-windows-vulnerability/</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="http://twitter.com/sambowne/statuses/550384131683520512" xml:lang="en">http://twitter.com/sambowne/statuses/550384131683520512</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The AhcVerifyAdminContext function in ahcache.sys in the Application Compatibility component in Microsoft Windows 7 SP1, Windows Server 2008 R2 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 does not verify that an impersonation token is associated with an administrative account, which allows local users to gain privileges by running AppCompatCache.exe with a crafted DLL file, aka MSRC ID 20544 or "Microsoft Application Compatibility Infrastructure Elevation of Privilege Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0003">
+    <vuln:vulnerable-configuration id="http://www.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_2003_server::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7::sp1:x64"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7::sp1:x86"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-:-:x64"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-:-:x86"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_vista::sp2"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_vista::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7::sp1:x86</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_2003_server::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-:-:x64</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-:-:x86</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7::sp1:x64</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0003</vuln:cve-id>
+    <vuln:published-datetime>2015-02-10T22:00:28.763-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-02-18T22:00:10.227-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>6.9</cvss:score>
+        <cvss:access-vector>LOCAL</cvss:access-vector>
+        <cvss:access-complexity>MEDIUM</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>COMPLETE</cvss:confidentiality-impact>
+        <cvss:integrity-impact>COMPLETE</cvss:integrity-impact>
+        <cvss:availability-impact>COMPLETE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-02-11T11:41:39.370-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-264"/>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-010" xml:lang="en">MS15-010</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>XF</vuln:source>
+      <vuln:reference href="http://xforce.iss.net/xforce/xfdb/100430" xml:lang="en">ms-kmd-cve20150003-priv-esc(100430)</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>BID</vuln:source>
+      <vuln:reference href="http://www.securityfocus.com/bid/72457" xml:lang="en">72457</vuln:reference>
+    </vuln:references>
+    <vuln:summary>win32k.sys in the kernel-mode drivers in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 allows local users to gain privileges or cause a denial of service (NULL pointer dereference) via a crafted application, aka "Win32k Elevation of Privilege Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0004">
+    <vuln:vulnerable-configuration id="http://nvd.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2003::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:-:sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_vista:-:sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7:-:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_rt:-:gold</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_vista:-:sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2003::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7:-:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:-:sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-:gold</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0004</vuln:cve-id>
+    <vuln:published-datetime>2015-01-13T17:59:02.597-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-01-14T16:29:25.090-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>7.2</cvss:score>
+        <cvss:access-vector>LOCAL</cvss:access-vector>
+        <cvss:access-complexity>LOW</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>COMPLETE</cvss:confidentiality-impact>
+        <cvss:integrity-impact>COMPLETE</cvss:integrity-impact>
+        <cvss:availability-impact>COMPLETE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-01-14T16:18:19.130-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-264"/>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="https://code.google.com/p/google-security-research/issues/detail?id=123" xml:lang="en">https://code.google.com/p/google-security-research/issues/detail?id=123</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-003" xml:lang="en">MS15-003</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The User Profile Service (aka ProfSvc) in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 allows local users to gain privileges by conducting a junction attack to load another user's UsrClass.dat registry hive, aka MSRC ID 20674 or "Microsoft User Profile Service Elevation of Privilege Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0005">
+    <vuln:vulnerable-configuration id="http://www.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_2003_server::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_2003_server::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0005</vuln:cve-id>
+    <vuln:published-datetime>2015-03-11T06:59:00.087-04:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-03-23T22:01:28.917-04:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>4.3</cvss:score>
+        <cvss:access-vector>ADJACENT_NETWORK</cvss:access-vector>
+        <cvss:access-complexity>MEDIUM</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>PARTIAL</cvss:confidentiality-impact>
+        <cvss:integrity-impact>PARTIAL</cvss:integrity-impact>
+        <cvss:availability-impact>NONE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-03-11T11:25:11.390-04:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-254"/>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-027" xml:lang="en">MS15-027</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>SECTRACK</vuln:source>
+      <vuln:reference href="http://www.securitytracker.com/id/1031891" xml:lang="en">1031891</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="http://www.coresecurity.com/advisories/windows-pass-through-authentication-methods-improper-validation" xml:lang="en">http://www.coresecurity.com/advisories/windows-pass-through-authentication-methods-improper-validation</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>FULLDISC</vuln:source>
+      <vuln:reference href="http://seclists.org/fulldisclosure/2015/Mar/60" xml:lang="en">20150310 [CORE-2015-0005] - Windows Pass-Through Authentication Methods Improper Validation</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="http://packetstormsecurity.com/files/130773/Windows-Pass-Through-Authentication-Methods-Improper-Validation.html" xml:lang="en">http://packetstormsecurity.com/files/130773/Windows-Pass-Through-Authentication-Methods-Improper-Validation.html</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The NETLOGON service in Microsoft Windows Server 2003 SP2, Windows Server 2008 SP2 and R2 SP1, and Windows Server 2012 Gold and R2, when a Domain Controller is configured, allows remote attackers to spoof the computer name of a secure channel's endpoint, and obtain sensitive session information, by running a crafted application and leveraging the ability to sniff network traffic, aka "NETLOGON Spoofing Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0006">
+    <vuln:vulnerable-configuration id="http://nvd.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2003::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:-:sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_vista:-:sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7:-:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-:gold"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_vista:-:sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2003::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7:-:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2::~~~x64~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:-:sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-:gold</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0006</vuln:cve-id>
+    <vuln:published-datetime>2015-01-13T17:59:03.580-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-01-14T16:28:28.150-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>6.1</cvss:score>
+        <cvss:access-vector>ADJACENT_NETWORK</cvss:access-vector>
+        <cvss:access-complexity>LOW</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>NONE</cvss:confidentiality-impact>
+        <cvss:integrity-impact>COMPLETE</cvss:integrity-impact>
+        <cvss:availability-impact>NONE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-01-14T16:10:09.097-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-264"/>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-005" xml:lang="en">MS15-005</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The Network Location Awareness (NLA) service in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, and Windows Server 2012 Gold and R2 does not perform mutual authentication to determine a domain connection, which allows remote attackers to trigger an unintended permissive configuration by spoofing DNS and LDAP responses on a local network, aka "NLA Security Feature Bypass Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0008">
+    <vuln:vulnerable-configuration id="http://nvd.nist.gov/">
+      <cpe-lang:logical-test operator="OR" negate="false">
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_2003_server::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008::sp2"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2008:r2:sp1"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_rt_8.1:-"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7::sp1:x64"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_7::sp1:x86"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-:-:x64"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8:-:-:x86"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~"/>
+        <cpe-lang:fact-ref name="cpe:/o:microsoft:windows_vista::sp2"/>
+      </cpe-lang:logical-test>
+    </vuln:vulnerable-configuration>
+    <vuln:vulnerable-software-list>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~essentials~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~standard~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:r2:-:~-~datacenter~~~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_rt_8.1:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_vista::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2008:r2:sp1</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7::sp1:x86</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_2003_server::sp2</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_server_2012:-</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-:-:x64</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8:-:-:x86</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_7::sp1:x64</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x64~</vuln:product>
+      <vuln:product>cpe:/o:microsoft:windows_8.1:-:-:~-~-~-~x86~</vuln:product>
+    </vuln:vulnerable-software-list>
+    <vuln:cve-id>CVE-2015-0008</vuln:cve-id>
+    <vuln:published-datetime>2015-02-10T22:00:29.607-05:00</vuln:published-datetime>
+    <vuln:last-modified-datetime>2015-02-20T22:01:43.953-05:00</vuln:last-modified-datetime>
+    <vuln:cvss>
+      <cvss:base_metrics>
+        <cvss:score>8.3</cvss:score>
+        <cvss:access-vector>ADJACENT_NETWORK</cvss:access-vector>
+        <cvss:access-complexity>LOW</cvss:access-complexity>
+        <cvss:authentication>NONE</cvss:authentication>
+        <cvss:confidentiality-impact>COMPLETE</cvss:confidentiality-impact>
+        <cvss:integrity-impact>COMPLETE</cvss:integrity-impact>
+        <cvss:availability-impact>COMPLETE</cvss:availability-impact>
+        <cvss:source>http://nvd.nist.gov</cvss:source>
+        <cvss:generated-on-datetime>2015-02-11T13:21:50.050-05:00</cvss:generated-on-datetime>
+      </cvss:base_metrics>
+    </vuln:cvss>
+    <vuln:cwe id="CWE-345"/>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>CERT-VN</vuln:source>
+      <vuln:reference href="http://www.kb.cert.org/vuls/id/787252" xml:lang="en">VU#787252</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>MS</vuln:source>
+      <vuln:reference href="http://technet.microsoft.com/security/bulletin/MS15-011" xml:lang="en">MS15-011</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+      <vuln:source>CONFIRM</vuln:source>
+      <vuln:reference href="http://blogs.technet.com/b/srd/archive/2015/02/10/ms15-011-amp-ms15-014-hardening-group-policy.aspx" xml:lang="en">http://blogs.technet.com/b/srd/archive/2015/02/10/ms15-011-amp-ms15-014-hardening-group-policy.aspx</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>MISC</vuln:source>
+      <vuln:reference href="https://www.jasadvisors.com/additonal-jasbug-security-exploit-info/" xml:lang="en">https://www.jasadvisors.com/additonal-jasbug-security-exploit-info/</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>XF</vuln:source>
+      <vuln:reference href="http://xforce.iss.net/xforce/xfdb/100426" xml:lang="en">ms-grouppolicy-cve20150008-code-exec(100426)</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>SECTRACK</vuln:source>
+      <vuln:reference href="http://www.securitytracker.com/id/1031719" xml:lang="en">1031719</vuln:reference>
+    </vuln:references>
+    <vuln:references xml:lang="en" reference_type="UNKNOWN">
+      <vuln:source>BID</vuln:source>
+      <vuln:reference href="http://www.securityfocus.com/bid/72477" xml:lang="en">72477</vuln:reference>
+    </vuln:references>
+    <vuln:summary>The UNC implementation in Microsoft Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows 8.1, Windows Server 2012 Gold and R2, and Windows RT Gold and 8.1 does not include authentication from the server to the client, which allows remote attackers to execute arbitrary code by making crafted data available on a UNC share, as demonstrated by Group Policy data from a spoofed domain controller, aka "Group Policy Remote Code Execution Vulnerability."</vuln:summary>
+  </entry>
+  <entry id="CVE-2015-0220">
+  <vuln:vulnerable-configuration id="http://www.nist.gov/">
+    <cpe-lang:logical-test operator="OR" negate="false">
+      <cpe-lang:fact-ref name="cpe:/o:canonical:ubuntu_linux:14.10"/>
+      <cpe-lang:fact-ref name="cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~"/>
+      <cpe-lang:fact-ref name="cpe:/o:canonical:ubuntu_linux:12.04::lts"/>
+      <cpe-lang:fact-ref name="cpe:/o:canonical:ubuntu_linux:10.04::lts"/>
+    </cpe-lang:logical-test>
+  </vuln:vulnerable-configuration>
+  <vuln:vulnerable-configuration id="http://www.nist.gov/">
+    <cpe-lang:logical-test operator="OR" negate="false">
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.4.17"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.1"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.2"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.3"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.4"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.5"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.6"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.7"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.8"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.6.9"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.7"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.7.1"/>
+      <cpe-lang:fact-ref name="cpe:/a:djangoproject:django:1.7.2"/>
+    </cpe-lang:logical-test>
+  </vuln:vulnerable-configuration>
+  <vuln:vulnerable-software-list>
+    <vuln:product>cpe:/a:djangoproject:django:1.7.1</vuln:product>
+    <vuln:product>cpe:/o:canonical:ubuntu_linux:14.10</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.3</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.4</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.1</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.2</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.7.2</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.4.17</vuln:product>
+    <vuln:product>cpe:/o:canonical:ubuntu_linux:14.04::~~lts~~~</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.6</vuln:product>
+    <vuln:product>cpe:/o:canonical:ubuntu_linux:10.04::lts</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.5</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.9</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.7</vuln:product>
+    <vuln:product>cpe:/o:canonical:ubuntu_linux:12.04::lts</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.8</vuln:product>
+    <vuln:product>cpe:/a:djangoproject:django:1.6.7</vuln:product>
+  </vuln:vulnerable-software-list>
+  <vuln:cve-id>CVE-2015-0220</vuln:cve-id>
+  <vuln:published-datetime>2015-01-16T11:59:19.563-05:00</vuln:published-datetime>
+  <vuln:last-modified-datetime>2015-04-17T21:59:52.200-04:00</vuln:last-modified-datetime>
+  <vuln:cvss>
+    <cvss:base_metrics>
+      <cvss:score>4.3</cvss:score>
+      <cvss:access-vector>NETWORK</cvss:access-vector>
+      <cvss:access-complexity>MEDIUM</cvss:access-complexity>
+      <cvss:authentication>NONE</cvss:authentication>
+      <cvss:confidentiality-impact>NONE</cvss:confidentiality-impact>
+      <cvss:integrity-impact>PARTIAL</cvss:integrity-impact>
+      <cvss:availability-impact>NONE</cvss:availability-impact>
+      <cvss:source>http://nvd.nist.gov</cvss:source>
+      <cvss:generated-on-datetime>2015-01-20T10:21:05.870-05:00</cvss:generated-on-datetime>
+    </cvss:base_metrics>
+  </vuln:cvss>
+  <vuln:cwe id="CWE-79"/>
+  <vuln:references xml:lang="en" reference_type="VENDOR_ADVISORY">
+    <vuln:source>CONFIRM</vuln:source>
+    <vuln:reference href="https://www.djangoproject.com/weblog/2015/jan/13/security/" xml:lang="en">https://www.djangoproject.com/weblog/2015/jan/13/security/</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>MANDRIVA</vuln:source>
+    <vuln:reference href="http://www.mandriva.com/security/advisories?name=MDVSA-2015:109" xml:lang="en">MDVSA-2015:109</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>MANDRIVA</vuln:source>
+    <vuln:reference href="http://www.mandriva.com/security/advisories?name=MDVSA-2015:036" xml:lang="en">MDVSA-2015:036</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>UBUNTU</vuln:source>
+    <vuln:reference href="http://ubuntu.com/usn/usn-2469-1" xml:lang="en">USN-2469-1</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>SUSE</vuln:source>
+    <vuln:reference href="http://lists.opensuse.org/opensuse-updates/2015-04/msg00001.html" xml:lang="en">openSUSE-SU-2015:0643</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>FEDORA</vuln:source>
+    <vuln:reference href="http://lists.fedoraproject.org/pipermail/package-announce/2015-January/148608.html" xml:lang="en">FEDORA-2015-0804</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>FEDORA</vuln:source>
+    <vuln:reference href="http://lists.fedoraproject.org/pipermail/package-announce/2015-January/148485.html" xml:lang="en">FEDORA-2015-0714</vuln:reference>
+  </vuln:references>
+  <vuln:references xml:lang="en" reference_type="UNKNOWN">
+    <vuln:source>CONFIRM</vuln:source>
+    <vuln:reference href="http://advisories.mageia.org/MGASA-2015-0026.html" xml:lang="en">http://advisories.mageia.org/MGASA-2015-0026.html</vuln:reference>
+  </vuln:references>
+  <vuln:summary>The django.util.http.is_safe_url function in Django before 1.4.18, 1.6.x before 1.6.10, and 1.7.x before 1.7.3 does not properly handle leading whitespaces, which allows remote attackers to conduct cross-site scripting (XSS) attacks via a crafted URL, related to redirect URLs, as demonstrated by a "\njavascript:" URL.</vuln:summary>
+</entry>
+</nvd>

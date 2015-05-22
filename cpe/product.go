@@ -1,6 +1,9 @@
-package main
+package cpe
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 const requiredLength = 7
 const requiredEditionLength = 6
@@ -43,4 +46,9 @@ func (p *Product) UnmarshalText(text []byte) error {
 
 	p.Language = cpeList[6]
 	return nil
+}
+
+func (p *Product) String() string {
+	edition := fmt.Sprintf("~%s~%s~%s~%s~%s", p.Edition, p.SWEdition, p.TargetSW, p.TargetHW, p.Other)
+	return fmt.Sprintf("cve:/%s:%s:%s:%s:%s:%s:%s", p.Part, p.Vendor, p.Product, p.Version, p.Update, edition, p.Language)
 }
