@@ -45,7 +45,7 @@ func BuildSearchCommand() *cobra.Command {
 		},
 	}
 
-	cmd.Flags().StringVarP(&dbFile, "db-file", "d", "test.bleve", "vulnerability db file to use")
+	cmd.Flags().StringVarP(&dbFile, "db-file", "d", defaultDbFile(), "vulnerability db file to use")
 
 	return cmd
 }
