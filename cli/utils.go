@@ -8,11 +8,15 @@ import (
 )
 
 func defaultDbFile() string {
+	return path.Join(defaultBaseDir(), "db.bleve")
+
+}
+
+func defaultBaseDir() string {
 	user, err := user.Current()
 	check(err)
 
-	return path.Join(user.HomeDir, ".vulndb/db.bleve")
-
+	return path.Join(user.HomeDir, ".vulndb")
 }
 
 func check(err error) {

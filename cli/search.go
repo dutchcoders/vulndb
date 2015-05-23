@@ -2,6 +2,7 @@ package cli
 
 import (
 	"fmt"
+	"reflect"
 	"strings"
 
 	"github.com/blevesearch/bleve"
@@ -15,6 +16,7 @@ var queryName = []string{"Part", "Vendor", "Product", "Version", "Update", "Edit
 // BuildSearchCommand returns a new reference to a search command.
 func BuildSearchCommand() *cobra.Command {
 	var dbFile string
+	var limit, offset int
 	var query bleve.Query
 
 	cmd := &cobra.Command{
@@ -31,23 +33,46 @@ func BuildSearchCommand() *cobra.Command {
 			}
 
 			search := bleve.NewSearchRequest(query)
-			search.Fields = []string{"Summary"}
+			search.Size = limit
+			search.From = offset
+			search.Fields = []string{"*"}
 
 			searchResults, _ := index.Search(search)
 
 			for _, hit := range searchResults.Hits {
 				fmt.Println(hit.ID)
-				fmt.Println(hit.Fields["Summary"])
+				fmt.Printf("Severity: %s\n", hit.Fields["Severity"])
+				fmt.Printf("Summary: %s\n", hit.Fields["Summary"])
+				fmt.Printf("References:\n")
+
+				fmt.Println(buildReferences(hit.Fields["References.URL"]))
 				fmt.Println("")
 			}
 
-			fmt.Printf("Found: %d. Completed in %s\n", searchResults.Total, searchResults.Took)
+			fmt.Printf("Showing entries %d-%d of %d. Completed in %s\n", offset+1, offset+limit, searchResults.Total, searchResults.Took)
 		},
 	}
 
 	cmd.Flags().StringVarP(&dbFile, "db-file", "d", defaultDbFile(), "vulnerability db file to use")
+	cmd.Flags().IntVarP(&limit, "limit", "l", 10, "number of results to display")
+	cmd.Flags().IntVarP(&offset, "from", "f", 0, "start results from number")
 
 	return cmd
+}
+
+func buildReferences(refs interface{}) string {
+	switch reflect.TypeOf(refs).Name() {
+	case "string":
+		return refs.(string)
+	default:
+		var strs = make([]string, len(refs.([]interface{})))
+
+		for i, ref := range refs.([]interface{}) {
+			strs[i] = ref.(string)
+		}
+
+		return strings.Join(strs, "\n")
+	}
 }
 
 func isCpeURI(s string) bool {
