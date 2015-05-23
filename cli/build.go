@@ -30,6 +30,11 @@ func BuildBuildCommand() *cobra.Command {
 			check(err)
 
 			mapping := bleve.NewIndexMapping()
+			mapping.DefaultAnalyzer = "keyword"
+
+			summaryMapping := bleve.NewDocumentMapping()
+			mapping.AddDocumentMapping("summary", summaryMapping)
+
 			index, err := bleve.New(dbFile, mapping)
 			check(err)
 
