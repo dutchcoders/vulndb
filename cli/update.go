@@ -11,26 +11,19 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// BuildBuildCommand returns a command for building vulnerability databases from a list of files.
-func BuildBuildCommand() *cobra.Command {
+// BuildUpdateCommand returns a command for updating vulnerability databases from a list of files.
+func BuildUpdateCommand() *cobra.Command {
 	var dbFile string
-	var force bool
 
 	cmd := &cobra.Command{
-		Use:   "build [<file>...]",
-		Short: "Build the vulnerability DB from a set of NVD CPE files.",
+		Use:   "update [<file>...]",
+		Short: "Update the existing vulnerability DB from a set of NVD CPE files.",
 		Run: func(cmd *cobra.Command, args []string) {
-
-			if force == true {
-				fmt.Printf("Force removing %s\n", dbFile)
-				os.RemoveAll(dbFile)
-			}
 
 			err := os.MkdirAll(defaultBaseDir(), 0777)
 			check(err)
 
-			mapping := bleve.NewIndexMapping()
-			index, err := bleve.New(dbFile, mapping)
+			index, err := bleve.Open(dbFile)
 			check(err)
 
 			for _, f := range args {
@@ -55,7 +48,6 @@ func BuildBuildCommand() *cobra.Command {
 	}
 
 	cmd.Flags().StringVarP(&dbFile, "db-file", "d", defaultDbFile(), "vulnerability db file to build")
-	cmd.Flags().BoolVarP(&force, "force", "f", false, "overwrite existing vulnerability db")
 
 	return cmd
 }

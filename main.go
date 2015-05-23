@@ -14,7 +14,8 @@ func main() {
 
 	searchCmd := cli.BuildSearchCommand()
 	buildCmd := cli.BuildBuildCommand()
+	updateCmd := cli.BuildUpdateCommand()
 
-	rootCmd.AddCommand(searchCmd, buildCmd)
+	rootCmd.AddCommand(searchCmd, buildCmd, updateCmd)
 	rootCmd.Execute()
 }
