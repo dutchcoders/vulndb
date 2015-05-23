@@ -1,4 +1,4 @@
-# vulnd
+# VulnDB
 
 [![Build Status](https://travis-ci.org/gerred/vulndb.svg?branch=master)](https://travis-ci.org/gerred/vulndb)
 
@@ -24,3 +24,25 @@ If a raw string is used, it will do a full text search on everything.
 Example:
 
 `vulndb search drupal`
+
+# NVD/CVE XML Feed with CVSS and CPE mappings
+
+https://nvd.nist.gov/download.cfm#RSS
+
+https://nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-2015.xml.gz
+
+## Contributions
+
+Contributions are welcome.
+
+## Creators
+
+**Remco Verhoef**
+- <https://twitter.com/remco_verhoef>
+- <https://twitter.com/dutchcoders>
+
+## Copyright and license
+
+Code and documentation copyright 2011-2015 Remco Verhoef.
+
+Code released under [the MIT license](LICENSE).

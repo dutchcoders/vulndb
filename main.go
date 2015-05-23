@@ -12,10 +12,11 @@ func main() {
 		Short: "Vulndb is a command line tool for searching the NIST Vulnerability Database.",
 	}
 
+	initCmd := cli.BuildInitCommand()
 	searchCmd := cli.BuildSearchCommand()
 	buildCmd := cli.BuildBuildCommand()
 	updateCmd := cli.BuildUpdateCommand()
 
-	rootCmd.AddCommand(searchCmd, buildCmd, updateCmd)
+	rootCmd.AddCommand(initCmd, searchCmd, buildCmd, updateCmd)
 	rootCmd.Execute()
 }

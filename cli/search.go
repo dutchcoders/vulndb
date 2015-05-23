@@ -35,16 +35,33 @@ func BuildSearchCommand() *cobra.Command {
 			search := bleve.NewSearchRequest(query)
 			search.Size = limit
 			search.From = offset
+			search.Highlight = bleve.NewHighlightWithStyle("ansi")
 			search.Fields = []string{"*"}
 
 			searchResults, _ := index.Search(search)
 
 			for _, hit := range searchResults.Hits {
 				fmt.Println(hit.ID)
-				fmt.Printf("Severity: %s\n", hit.Fields["Severity"])
-				fmt.Printf("Summary: %s\n", hit.Fields["Summary"])
-				fmt.Printf("References:\n")
 
+				severity := hit.Fields["Severity"]
+				if fragment, ok := hit.Fragments["Severity"]; ok {
+					severity = fragment[0]
+				}
+				fmt.Printf("Severity: %s\n", severity)
+
+				vendor := hit.Fields["Products.Vendor"]
+				if fragment, ok := hit.Fragments["Products.Vendor"]; ok {
+					vendor = fragment[0]
+				}
+				fmt.Printf("Vendor: %s\n", vendor)
+
+				summary := hit.Fields["Summary"]
+				if fragment, ok := hit.Fragments["Summary"]; ok {
+					summary = fragment[0]
+				}
+				fmt.Printf("Summary: %s\n", summary)
+
+				fmt.Printf("References:\n")
 				fmt.Println(buildReferences(hit.Fields["References.URL"]))
 				fmt.Println("")
 			}
